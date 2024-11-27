@@ -1,0 +1,28 @@
+name: SupremeEconomy
+version: '${project.version}'
+main: net.noscape.project.supremeeco.SupremeEconomy
+api-version: 1.13
+authors: [Scape]
+description: All in one economy plugin!
+softdepend: [PlaceholderAPI, Vault]
+
+commands:
+  money:
+    description: supreme economy main money command.
+    aliases:
+      - tokens
+  supremeeconomy:
+    description: supreme economy main command.
+    aliases: [se]
+  exchange:
+    description: main economy exchange command.
+  balance:
+    aliases: [bal]
+  baltop:
+    aliases: [topbal]
+  pay:
+    aliases: [give]
+  toggle:
+    aliases: [toggleeco]
+  bank:
+    description: bank system command

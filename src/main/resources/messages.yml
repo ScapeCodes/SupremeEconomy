@@ -1,0 +1,70 @@
+# plugin placeholders:
+# * %PREFIX% - displays the plugins prefix 'prefix: "__"'
+# * %receiver_name% - gets the player name of the receiving tokens.
+# * %receiver_displayname% - gets the player displayname of the receiving tokens.
+# * %money% - gets the value of current set/get/received money in the message.
+# * TokensECO also supports placeholderapi.
+m:
+  # plugin prefix
+  PREFIX: '&8[&b&lSupremeEco&8]'
+
+  # design formats > token symbols [ ⛀ ⛂ ⛁ ⛃ ]
+  SYMBOL: '⛃'
+
+  # token balance
+  BALANCE: '&7Balance: &e⛃&f%tokens% tokens'
+
+  # event messages
+  PLAYER-KILL: '%PREFIX% &b⛃&f%money% &7for &akilling %player%!'
+  PLAYER-DEATH: '%PREFIX% &b⛃&f%money% &7for &aYour own Death!'
+  ENTITY-KILL: '%PREFIX% &b⛃&f%money% &7for &akilling a %entity%!'
+  CRAFTING: '%PREFIX% &b⛃&f%money% &7for &aCrafting an Item!'
+  ADVANCEMENT: '%PREFIX% &b⛃&f%money% &7for &aUnlocking an Advancement!'
+  PORTAL-NETHER: '%PREFIX% &b⛃&f%money% &7for &aEntering the Nether!'
+  PORTAL-END: '%PREFIX% &b⛃&f%money% &7for &aEntering the End!'
+
+  # bank messages
+  BANK-BALANCE: '%PREFIX% &7Bank Balance: &b⛃&f%bank%'
+  BANK-WITHDRAW: '%PREFIX% &b⛃&f%amount% &7have been removed & added to you token balance.'
+  BANK-DEPOSIT: '%PREFIX% &b⛃&f%amount% &7have been added into the bank.'
+  BANK-HELP:
+    - '&bToken Bank Commands:'
+    - ''
+    - '&3/bank &7- will display your bank balance.'
+    - '&3/bank [help] &7- will display this help page.'
+    - '&3/bank [withdraw] <amount> &7- withdraw money from your bank.'
+    - '&3/bank [deposit] <amount> &7- deposit money into your bank.'
+    - ''
+    - '&b<> &7Required. &b[] &7Optional.'
+
+  # admin messages
+  ADMIN-HELP:
+    - '&cSupremeEconomy Commands:'
+    - ''
+    - '&c/supremeeconomy &7- will display this help menu.'
+    - '&c/supremeeconomy tokens [give/set/remove] <player> <amount> &7- player setting commands for normal token balance.'
+    - '&c/supremeeconomy bank [give/set/remove] <player> <amount> &7- player setting commands for bank system.'
+    - '&c/supremeeconomy reload &7- reload all files.'
+    - '&c/supremeeconomy version &7- check what version plugin on.'
+    - ''
+    - '&c<> &7Required. &c[] &7Optional.'
+
+  # normal token balance messages
+  PAY: '&e&lTOKENS &7You''ve sent &b⛃&f%money% &7to &e%receiver_name%&7!'
+  RECEIVED: '&e&lTOKENS &7You have received &b⛃&f%money% into your account!'
+
+  # checked messages
+  MAX-DEPOSIT: '%PREFIX%  &7You tried depositing too much.'
+  MIN-DEPOSIT: '%PREFIX%  &7You tried depositing too little.'
+  MAX-WITHDRAW: '%PREFIX% &7You tried withdrawing too much.'
+  MIN-WITHDRAW: '%PREFIX% &7You tried withdrawing too little.'
+  NOT-ENOUGH-TO-WITHDRAW: '%PREFIX% &7You''re trying to withdraw more than you have.'
+  NOT-ENOUGH-TO-DEPOSIT: '%PREFIX% &7Not enough tokens to deposit into your bank.'
+  NOT_ENOUGH_MATERIALS: '%PREFIX% &cYou don''t have enough materials to get this!'
+  NOT_ENOUGH_TOKENS: '%PREFIX% &cYou don''t have enough tokens!'
+  SEND_YOUR_SELF: '%PREFIX% &cYou cannot send tokens to yourself!'
+
+  # plugin messages
+  RELOADED: '%PREFIX% &7Plugin Reloaded'
+  PERMISSION: '%PREFIX% &cYou have no permission to use this!'
+
