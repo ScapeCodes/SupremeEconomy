@@ -29,11 +29,11 @@ public class ConfigManager {
     }
 
     public String getBalanceSQL(Player player) {
-        return Utils.applyFormat(Objects.requireNonNull(this.getMessages().getString("m.BALANCE")).replaceAll("%tokens%", String.valueOf(MySQLUserData.getTokensDouble(player.getUniqueId()))));
+        return Utils.applyFormat(Objects.requireNonNull(this.getMessages().getString("m.BALANCE")).replaceAll("%money%", String.valueOf(MySQLUserData.getTokensDouble(player.getUniqueId()))));
     }
 
     public String getBalanceH2(Player player) {
-        return Utils.applyFormat(Objects.requireNonNull(this.getMessages().getString("m.BALANCE")).replaceAll("%tokens%", String.valueOf(H2UserData.getTokensDouble(player.getUniqueId()))));
+        return Utils.applyFormat(Objects.requireNonNull(this.getMessages().getString("m.BALANCE")).replaceAll("%money%", String.valueOf(H2UserData.getTokensDouble(player.getUniqueId()))));
     }
 
     public boolean isInDisabledWorld(Player player) {
@@ -69,7 +69,7 @@ public class ConfigManager {
     }
 
     public String getEventMessage(String str, String tokens) {
-        return Utils.applyFormat(Objects.requireNonNull(getMessages().getString("m." + str)).replaceAll("%tokens%", tokens));
+        return Utils.applyFormat(Objects.requireNonNull(getMessages().getString("m." + str)).replaceAll("%money%", tokens));
     }
 
     public String getReload() {
@@ -146,7 +146,7 @@ public class ConfigManager {
 
     public String getTitleMenu(Player player) {
         EconomyManager tokens = SupremeEconomy.getTokenManager(player);
-        return Objects.requireNonNull(getTokenMenu().getString("gui.title")).replaceAll("%tokens%", String.valueOf(tokens.getTokens()));
+        return Objects.requireNonNull(getTokenMenu().getString("gui.title")).replaceAll("%money%", String.valueOf(tokens.getTokens()).replaceAll("%player%", player.getName()));
     }
 
     public int getSlotsShop() {

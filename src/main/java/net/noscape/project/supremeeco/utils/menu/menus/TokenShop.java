@@ -102,7 +102,7 @@ public class TokenShop extends Menu {
             }
 
             if (glow) {
-                item.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
+                item.addUnsafeEnchantment(Enchantment.FLAME, 1);
             }
 
             inventory.setItem(slot, item);

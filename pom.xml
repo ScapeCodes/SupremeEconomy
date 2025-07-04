@@ -6,7 +6,7 @@
 
     <groupId>net.noscape.project.supremeeco</groupId>
     <artifactId>SupremeEconomy</artifactId>
-    <version>1.5</version>
+    <version>1.6</version>
     <packaging>jar</packaging>
 
     <name>SupremeEconomy</name>
@@ -85,7 +85,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.20.4-R0.1-SNAPSHOT</version>
+            <version>1.21.3-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -97,7 +97,7 @@
         <dependency>
             <groupId>me.clip</groupId>
             <artifactId>placeholderapi</artifactId>
-            <version>2.11.5</version>
+            <version>2.11.6</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

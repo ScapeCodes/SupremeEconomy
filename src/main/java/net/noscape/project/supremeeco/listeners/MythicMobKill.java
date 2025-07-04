@@ -22,7 +22,7 @@ public class MythicMobKill implements Listener {
                     man.addTokens(tokens);
 
                     if (SupremeEconomy.getConfigManager().isEventMessage()) {
-                        player.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("ADVANCEMENT", "&a+" + tokens).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()));
+                        player.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("ADVANCEMENT", "&a+" + tokens).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()).replaceAll("%player%", player.getName()));
                     }
                 }
             }

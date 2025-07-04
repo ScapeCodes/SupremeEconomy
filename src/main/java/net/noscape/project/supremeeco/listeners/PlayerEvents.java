@@ -53,7 +53,7 @@ public class PlayerEvents implements Listener {
                 man.removeTokens(value);
 
                 if (SupremeEconomy.getConfigManager().isEventMessage()) {
-                    player.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PORTAL-NETHER", "&c-" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()));
+                    player.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PORTAL-NETHER", "&c-" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()).replaceAll("%player%", player.getName()));
                 }
             } else {
                 int value = Integer.parseInt(str);
@@ -61,7 +61,7 @@ public class PlayerEvents implements Listener {
                     man.addTokens(value);
 
                     if (SupremeEconomy.getConfigManager().isEventMessage()) {
-                        player.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PORTAL-NETHER", "&a+" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()));
+                        player.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PORTAL-NETHER", "&a+" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()).replaceAll("%player%", player.getName()));
                     }
                 }
             }
@@ -80,7 +80,7 @@ public class PlayerEvents implements Listener {
                     man.removeTokens(value);
 
                     if (SupremeEconomy.getConfigManager().isEventMessage()) {
-                        player.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PORTAL-END", "&c-" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()));
+                        player.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PORTAL-END", "&c-" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()).replaceAll("%player%", player.getName()));
                     }
                 } else {
                     int value = Integer.parseInt(str);
@@ -88,7 +88,7 @@ public class PlayerEvents implements Listener {
                         man.addTokens(value);
 
                         if (SupremeEconomy.getConfigManager().isEventMessage()) {
-                            player.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PORTAL-END", "&a+" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()));
+                            player.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PORTAL-END", "&a+" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()).replaceAll("%player%", player.getName()));
                         }
                     }
                 }

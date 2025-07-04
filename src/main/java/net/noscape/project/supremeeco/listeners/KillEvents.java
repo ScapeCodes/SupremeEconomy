@@ -27,7 +27,7 @@ public class KillEvents implements Listener {
                         man.addTokens(tokens);
 
                         if (SupremeEconomy.getConfigManager().isEventMessage()) {
-                            killer.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PLAYER-KILL", "&a+" + tokens).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()));
+                            killer.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PLAYER-KILL", "&a+" + tokens).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()).replaceAll("%player%", killer.getName()));
                         }
                     }
                 }
@@ -49,7 +49,7 @@ public class KillEvents implements Listener {
 
                             if (SupremeEconomy.getConfigManager().getConfig().getBoolean("t.player.events.enable-messages")) {
                                 killer.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("ENTITY-KILL", "&a+" + tokens).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix())
-                                        .replaceAll("%entity%", e.getEntity().getName()));
+                                        .replaceAll("%entity%", e.getEntity().getName()).replaceAll("%player%", killer.getName()));
                             }
                         }
                     }
@@ -70,7 +70,7 @@ public class KillEvents implements Listener {
                     man.removeTokens(value);
 
                     if (SupremeEconomy.getConfigManager().isEventMessage()) {
-                        victim.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PLAYER-DEATH", "&c-" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()));
+                        victim.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PLAYER-DEATH", "&c-" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()).replaceAll("%player%", victim.getName()));
                     }
                 } else {
                     int value = Integer.parseInt(str);
@@ -79,7 +79,7 @@ public class KillEvents implements Listener {
                         man.addTokens(value);
 
                         if (SupremeEconomy.getConfigManager().isEventMessage()) {
-                            victim.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PLAYER-DEATH", "&a+" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()));
+                            victim.sendMessage(SupremeEconomy.getConfigManager().getEventMessage("PLAYER-DEATH", "&a+" + value).replaceAll("%PREFIX%", SupremeEconomy.getConfigManager().getPrefix()).replaceAll("%player%", victim.getName()));
                         }
                     }
                 }
